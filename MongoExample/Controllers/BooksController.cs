@@ -18,10 +18,12 @@ namespace MongoExample.Controllers
         }
 
         [HttpGet]
+        [Route("Books")]
         public async Task<ActionResult<List<Book>>> Get() =>
           await _bookService.Get();
 
         [HttpGet(Name = "GetBook")]
+        [Route("Book")]
         public async Task<ActionResult<Book>> Get(string id)
         {
             var book = await _bookService.Get(id);
@@ -35,6 +37,7 @@ namespace MongoExample.Controllers
         }
 
         [HttpPost]
+        [Route("Create")]
         public async Task<ActionResult<Book>> Create(Book book)
         {
             await _bookService.Create(book);
