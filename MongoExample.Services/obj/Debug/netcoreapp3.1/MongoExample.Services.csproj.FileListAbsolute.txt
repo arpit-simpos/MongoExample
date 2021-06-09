@@ -1,0 +1,12 @@
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\bin\Debug\netcoreapp3.1\MongoExample.Services.deps.json
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\bin\Debug\netcoreapp3.1\MongoExample.Services.dll
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\bin\Debug\netcoreapp3.1\MongoExample.Services.pdb
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\bin\Debug\netcoreapp3.1\MongoExample.Data.dll
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\bin\Debug\netcoreapp3.1\MongoExample.Data.pdb
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\obj\Debug\netcoreapp3.1\MongoExample.Services.csprojAssemblyReference.cache
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\obj\Debug\netcoreapp3.1\MongoExample.Services.AssemblyInfoInputs.cache
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\obj\Debug\netcoreapp3.1\MongoExample.Services.AssemblyInfo.cs
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\obj\Debug\netcoreapp3.1\MongoExample.Services.csproj.CoreCompileInputs.cache
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\obj\Debug\netcoreapp3.1\MongoExample.Services.csproj.CopyComplete
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\obj\Debug\netcoreapp3.1\MongoExample.Services.dll
+C:\Users\Elite\source\repos\MongoExample\MongoExample.Services\obj\Debug\netcoreapp3.1\MongoExample.Services.pdb

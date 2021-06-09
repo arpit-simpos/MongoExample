@@ -1,0 +1,9 @@
+C:\Users\Elite\source\repos\MongoExample\MongoExample.ViewModels\bin\Debug\netcoreapp3.1\MongoExample.ViewModels.deps.json
+C:\Users\Elite\source\repos\MongoExample\MongoExample.ViewModels\bin\Debug\netcoreapp3.1\MongoExample.ViewModels.dll
+C:\Users\Elite\source\repos\MongoExample\MongoExample.ViewModels\bin\Debug\netcoreapp3.1\MongoExample.ViewModels.pdb
+C:\Users\Elite\source\repos\MongoExample\MongoExample.ViewModels\obj\Debug\netcoreapp3.1\MongoExample.ViewModels.csprojAssemblyReference.cache
+C:\Users\Elite\source\repos\MongoExample\MongoExample.ViewModels\obj\Debug\netcoreapp3.1\MongoExample.ViewModels.AssemblyInfoInputs.cache
+C:\Users\Elite\source\repos\MongoExample\MongoExample.ViewModels\obj\Debug\netcoreapp3.1\MongoExample.ViewModels.AssemblyInfo.cs
+C:\Users\Elite\source\repos\MongoExample\MongoExample.ViewModels\obj\Debug\netcoreapp3.1\MongoExample.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\Elite\source\repos\MongoExample\MongoExample.ViewModels\obj\Debug\netcoreapp3.1\MongoExample.ViewModels.dll
+C:\Users\Elite\source\repos\MongoExample\MongoExample.ViewModels\obj\Debug\netcoreapp3.1\MongoExample.ViewModels.pdb
