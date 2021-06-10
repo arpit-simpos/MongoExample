@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using MongoExample.Data.Config;
 using MongoExample.Services;
+using MongoExample.Services.Utility;
 
 namespace MongoExample
 {
@@ -26,6 +27,8 @@ namespace MongoExample
 
             services.AddSingleton<IDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
+
+            services.AddSingleton<IMongoCRUD>(new MongoCRUD("BookstoreDb"));
 
             services.AddSingleton<BookService>();
 

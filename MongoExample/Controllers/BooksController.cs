@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MongoExample.Data;
 using MongoExample.Services;
+using MongoExample.ViewModels;
 
 namespace MongoExample.Controllers
 {

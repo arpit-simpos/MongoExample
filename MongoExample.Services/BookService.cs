@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoExample.Data;
 using MongoExample.Data.Config;
+using MongoExample.Services.Utility;
+using MongoExample.ViewModels;
 
 namespace MongoExample.Services
 {
@@ -12,33 +15,35 @@ namespace MongoExample.Services
         Task<Book> Get(string id);
         Task<Book> Create(Book book);
         Task<Book> Update(string id, Book bookIn);
-        Task Remove(Book bookIn);
         Task Remove(string id);
 
     }
     public class BookService : IBookService
     {
-        private readonly IMongoCollection<Book> _books;
-        public BookService(IDatabaseSettings settings)
-        {
-            var client = new MongoClient(settings.ConnectionString);
-            var database = client.GetDatabase(settings.DatabaseName);
+        private readonly string tableName = string.Empty;
+        private readonly IMongoCRUD _mongoCrud;
 
-            _books = database.GetCollection<Book>(settings.BooksCollectionName);
+        public BookService(IDatabaseSettings settings,IMongoCRUD mongoCrud)
+        {
+            tableName = settings.Books;
+            _mongoCrud = new MongoCRUD(settings.DatabaseName);
         }
 
-        public async Task<List<Book>> Get() => await _books.Find(book => true).ToListAsync();
-        public async Task<Book> Get(string id) => await _books.Find(book => book.Id == id).FirstOrDefaultAsync();
-        public async Task Remove(Book bookIn) => await _books.DeleteOneAsync<Book>(book => book.Id == bookIn.Id);
-        public async Task Remove(string id) => await _books.DeleteOneAsync<Book>(book => book.Id == id);
+        public async Task<List<Book>> Get() => await _mongoCrud.LoadRecords<Book>(tableName);
+        public async Task<Book> Get(string id) => await _mongoCrud.LoadRecordsById<Book>(tableName, id);
+        public async Task Remove(string id) => await _mongoCrud.DeleteRecord<Book>(tableName, id);
         public async Task<Book> Create(Book book)
         {
-            await _books.InsertOneAsync(book);
+            Guid g = Guid.NewGuid();
+
+            book.BranchName.BranchId =g.ToString();
+            book.BranchName.BranchName = "Gurukul";
+            await _mongoCrud.InsertRecord<Book>(tableName,book);
             return book;
         }
         public async Task<Book> Update(string id, Book bookIn)
         {
-            await _books.ReplaceOneAsync<Book>(book => book.Id == id, bookIn);
+            await _mongoCrud.UpdateRecord<Book>(tableName,id,bookIn);
             return bookIn;
         }
     }
